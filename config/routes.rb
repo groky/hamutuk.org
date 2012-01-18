@@ -1,4 +1,10 @@
 HamutukOrg::Application.routes.draw do
+  get "home/home"
+
+  get "home/contact"
+
+  get "home/about"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
