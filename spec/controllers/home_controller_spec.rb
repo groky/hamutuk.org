@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe HomeController do
 
-  describe "GET 'home'" do
+  describe "GET 'index'" do
     it "should be successful" do
-      get 'home'
+      get 'index'
       response.should be_success
     end
   end
