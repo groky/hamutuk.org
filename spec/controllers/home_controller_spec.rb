@@ -9,16 +9,16 @@ describe HomeController do
     end
   end
 
-  describe "GET 'contact'" do
+  describe "GET 'about'" do
     it "should be successful" do
-      get 'contact'
+      get 'about'
       response.should be_success
     end
   end
 
-  describe "GET 'about'" do
+  describe "GET 'contact'" do
     it "should be successful" do
-      get 'about'
+      get 'contact'
       response.should be_success
     end
   end

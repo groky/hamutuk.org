@@ -3,12 +3,14 @@
 <head>
   <title>hamutuk.org</title>
   <%= stylesheet_link_tag    "application" %>
-  <link rel="stylesheet" type="text/css" href="blueprint/screen.css">
+  <%= stylesheet_link_tag "blueprint/screen" %>
   <%= javascript_include_tag "application" %>
 </head>
 <body>
+<div class="container">
 
 <%= yield %>
 
+</div>
 </body>
 </html>

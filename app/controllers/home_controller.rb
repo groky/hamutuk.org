@@ -2,10 +2,10 @@ class HomeController < ApplicationController
   def home
   end
 
-  def contact
+  def about
   end
 
-  def about
+  def contact
   end
 
 end
