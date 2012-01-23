@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-HamutukOrg::Application.config.secret_token = '68bc416b716d2245f6d1fa80e1c66ebec6a3b1a4c415462dca2b8e2d08cfee22f6da86c47495381f698e94def52b3b57af071209ebc954a106ed973e177bfb97'
+HamutukOrg::Application.config.secret_token = 'cfa691ccba6cf429892f9d4b49bd73146ace7dcb2bda93dfe8a68076a3a0f66770f25c4234017ba2f02bd6242b101fe4f93f75a2e284eed5f4a669b97319de3b'
