@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+	</head>
+		<title><%= title %></title>
+		<%= csrf_meta_tag %>
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![end if]-->
+		<%= stylesheet_link_tag "blueprint/screen" %>
+		<%= stylesheet_link_tag "blueprint/print" %>
+		<%= stylesheet_link_tag "custom" %>
+		<!--[if lt IE 8]><%= stylesheet_link_tag "blueprint/ie" %><![end if]-->
+	</head>
+	
+	<body>
+		<div class="container">
+			<header>
+				<%= image_tag("title.png", :alt => "hamutuk.org", :width => 300 ,:class => "round") %>
+				<nav class="nav-round">
+					<ul>
+						<li><%=link_to "Home", '/'%></li>
+						<li><%=link_to "About", 'about'%></li>
+						<li><%=link_to "Contact Us", 'contact'%></li>
+					</ul>
+				</nav>
+			</header>
+
+			<%= yield %>
+
+		</div>
+	</body>
+</html>

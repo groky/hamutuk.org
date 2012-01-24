@@ -4,7 +4,7 @@ require 'spork'
 Spork.prefork do
   ENV["RAILS_ENV"] ||= 'test'
   unless defined?(Rails)
-    require File.dirname{__FILE__} + "/../config/environment"
+    require File.dirname(__FILE__) + "/../config/environment"
   end
   require 'rspec/rails'
   

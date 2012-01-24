@@ -1,2 +1,17 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+
+<%= image_tag("test-image2.png", :alt => "test image" ,:class => "round", :width => 900) %>	
+
+<section class="round">
+	<h1><%= @title %></h1>
+	<h2>Our Goal</h2>
+	
+	<p>
+		To change the world through education <br />
+	</p>
+	
+	<h2>What we do</h2>
+	
+	<p>
+		At <%= link_to "hamutuk.org", "/" %> we hope to inspire the young lives of so many children around the world, by providing information to the wider public, putting in their hands the power to effect a positive change in these young lives.
+	</p>
+</section>
