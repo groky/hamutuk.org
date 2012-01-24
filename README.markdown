@@ -9,6 +9,11 @@ To build a system whereby individuals can access funds to further their educatio
 In brief: 
 The website will accept donations from individuals and allocate those funds to individuals based on merit and needs of their respective communities. In some cases students will have to compete for scholarships, but we hope that doesn't have to happen too often!
 
+We would like to solicit the help of experienced (and other) rails developers. I believe this website can change many lives in many different ways.
+
+Installation:
+Still working on it... I'm new to git
+
 
  
 
