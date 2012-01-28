@@ -1,0 +1,125 @@
+
+
+.container {
+	margin:auto;
+	width: 900px;
+}
+
+body {
+	background: #fff;
+	/*font-size: 14px;
+	letter-spacing: 1px;*/
+}
+
+header {
+	padding-top:20px;
+}
+
+/* the footer */
+
+footer {
+	text-align: center;
+	margin-top: 10px;
+	width:	900px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 12px;
+	font-style: italic;
+}
+
+
+footer nav {
+	float: none;
+}
+
+header img {
+	padding: 1em;
+	background: #fff;
+}
+
+section {
+	margin-top: 1em;
+	font-size: 120%;
+	padding: 20px;
+	background: #fff;
+	border: 1px solid #F0F0F0;
+}
+
+/* links */
+a {
+	color:	#09c;
+	text-decoration: none;
+}
+
+a:hover {
+	color:	#069;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #069;
+	text-decoration: none;
+}
+
+/* navigation */
+nav {
+	float: right;
+}
+
+nav {
+	background-color: #fff;
+	padding: 0 0.7em;
+	white-space: nowrap;
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 0.2em 0;
+}
+
+nav ul li a {
+	padding: 0 5px;
+	font-weight: bold;
+}
+
+nav ul li a:visited {
+	color: #09c;
+}
+
+nav ul li a:hover {
+	text-decoration: underline;
+}
+
+/*login button*/
+
+a.button {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align: center;
+	width: 100px;
+	color: #fff;
+	background: #006400;
+	font-size: 150%;
+	font-weight: bold;
+	padding: 20px;
+}
+
+/* rounded corners */ 
+.nav-round{
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.round {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
