@@ -7,8 +7,8 @@
 
 body {
 	background: #fff;
-	font-size: 14px;
-	letter-spacing: 1px;
+	/*font-size: 14px;
+	letter-spacing: 1px;*/
 }
 
 header {
@@ -17,17 +17,19 @@ header {
 
 /* the footer */
 
-.footer {
-	padding: 0;
-	margin: auto;
+footer {
+	text-align: center;
+	margin-top: 10px;
+	width:	900px;
+	margin-left: auto;
+	margin-right: auto;
 	font-size: 12px;
 	font-style: italic;
 }
 
-.footer li {
-	list-style-type: none;
-	display: inline-block;
-	padding-left: 20px;
+
+footer nav {
+	float: none;
 }
 
 header img {
@@ -43,14 +45,6 @@ section {
 	border: 1px solid #F0F0F0;
 }
 
-section h1 {
-	font-size: 150%;
-}
-
-section h2 {
-	font-size: 100%;
-}
-
 /* links */
 a {
 	color:	#09c;
@@ -64,6 +58,7 @@ a:hover {
 
 a:visited {
 	color: #069;
+	text-decoration: none;
 }
 
 /* navigation */
