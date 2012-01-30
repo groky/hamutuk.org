@@ -123,3 +123,14 @@ a.button {
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
 }
+
+/* the address block*/
+.address {
+	margin: 0;
+	padding: 0;
+}
+
+.address li {
+	list-style-type: none;
+}
+
