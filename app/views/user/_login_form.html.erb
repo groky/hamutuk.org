@@ -1,0 +1,8 @@
+<section class="round">
+	<%= form_for(@user) do |f| %>
+		<label>Email</label>
+		<%=f.text_field :email %>
+		<label>Password</label>
+		<%=f.password_field :password%>	
+	<% end %>
+</section>

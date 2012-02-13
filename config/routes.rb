@@ -1,19 +1,33 @@
-HamutukOrg::Application.routes.draw do
-  
+HamutukOrg::Application.routes.draw do 
+
+
   #the root page
   root :to => "home#index"
   
-  get "home/index"
+  #get "home/index"
 
-  get "home/about"
+  #get "home/about"
 
-  get "home/contact"
+  #get "home/contact"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  match 'about' => "home#about"
-  match 'contact' => "home#contact"
+  # The home routes
+  match 'about',   :to => "home#about"
+  match 'contact', :to => "home#contact"
+  
+  # The user routes
+  resources :users, :controller => 'user'
+  #devise_for :users 
+  #get "user/login"
+  #get "user/register"
+  
+  match 'users'        ,:to => "user#create"  
+  match 'user/show/:id',:to  => "user#show" 
+  match 'register'     ,:to  => "user#register"
+  match 'login'        ,:to  => "user#login"
+  
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
