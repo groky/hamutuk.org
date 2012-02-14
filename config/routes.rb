@@ -3,7 +3,7 @@ HamutukOrg::Application.routes.draw do
 
   #the root page
   root :to => "home#index"
-  
+ 
   #get "home/index"
 
   #get "home/about"
@@ -16,6 +16,8 @@ HamutukOrg::Application.routes.draw do
   # The home routes
   match 'about',   :to => "home#about"
   match 'contact', :to => "home#contact"
+  
+ 
   
   # The user routes
   resources :users, :controller => 'user'
