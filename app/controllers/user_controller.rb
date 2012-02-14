@@ -6,8 +6,9 @@ class UserController < ApplicationController
       flash[:success] = "Congratulations on joining hamutuk.org!"
       redirect_to @user
     else
-      @title = "Register - failed"
-      render 'register'
+      @title = "Registration Failure"
+      @user.password = ""
+      render :register
     end
   end
   
