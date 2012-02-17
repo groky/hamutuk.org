@@ -1,6 +1,8 @@
 HamutukOrg::Application.routes.draw do 
 
 
+  get "sessions/new"
+
   #the root page
   root :to => "home#index"
  
@@ -28,7 +30,13 @@ HamutukOrg::Application.routes.draw do
   match 'users'        ,:to => "user#create"  
   match 'user/show/:id',:to  => "user#show" 
   match 'register'     ,:to  => "user#register"
-  match 'login'        ,:to  => "user#login"
+  #match 'login'        ,:to  => "user#login"
+  
+  # The sessions routes
+  resources :sessions,  :only => [:new, :create, :destroy]
+  
+  match 'login',        :to => "sessions#new"
+  match 'logout',       :to => "sessions#destroy"
   
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

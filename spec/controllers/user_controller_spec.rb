@@ -34,7 +34,7 @@ describe UserController do
     
       it "should have the correct title" do
         post :create, :user => @attr
-        response.should have_selector("title", :content => "Register")
+        response.should have_selector("title", :content => "Registration Failure")
       end
     
       it "should render the 'new page' template" do
@@ -64,6 +64,12 @@ describe UserController do
         post :create, :user => @attr
         flash[:success].should =~ /congratulations on joining hamutuk.org!/i
       end
+      
+      it "should sign the user in" do
+        post :create , :user => @attr
+        controller.should be_signed_in
+      end
+      
     end
   end
 end
