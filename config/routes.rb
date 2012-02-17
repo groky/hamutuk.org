@@ -27,9 +27,10 @@ HamutukOrg::Application.routes.draw do
   #get "user/login"
   #get "user/register"
   
-  match 'users'        ,:to => "user#create"  
-  match 'user/show/:id',:to  => "user#show" 
-  match 'register'     ,:to  => "user#register"
+  match 'users'           ,:to => "user#create"  
+  match 'user/show/:id'   ,:to => "user#show" 
+  match 'register'        ,:to => "user#register"
+  match 'users/:id/edit'  ,:to => "user#edit"
   #match 'login'        ,:to  => "user#login"
   
   # The sessions routes
