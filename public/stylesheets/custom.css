@@ -122,12 +122,16 @@ a.button {
 .nav-round{
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
+	-opera-border-radius: 5px;
+	-khtml-border-radius: 5px;
 	border-radius: 5px;
 }
 
 .round {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
+	-opera-border-radius: 10px;
+	-khtml-border-radius: 10px;
 	border-radius: 10px;
 }
 
@@ -174,9 +178,30 @@ div.field, div.actions {
 	margin-bottom: 10px;
 }
 
+.register-button:hover {
+	text-decoration: none;
+}
+
 .register-button {
-	padding: 5px 5px 5px 5px;
-	background-color: #F0F0F0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 3.5em;
+	padding-right: 3.5em;
+	/*background-color: #F0F0F0;*/
+	background-image: -webkit-gradient(linear, left top, left bottom, 
+						from(#feebb7), to(#feebb7),color-stop(0.2, #fff));
+	color: #09c;
+	font-size: 16px;
+	text-shadow: 1px 1px 1px #fff;
+	border: none;
+	-moz-box-shadow: 3px 3px 4px #F0F0F0;
+	-webkit-box-shadow: 3px 3px 4px #F0F0F0;
+	box-shadow: 3px 3px 4px #F0F0F0;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#F0F0F0')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#F0F0F0');
+	
 	/*float: right;*/
 	
 }
@@ -221,7 +246,8 @@ a.login-button, a.reg-button {
 	box-shadow: 2px 2px 2px #bbb;
 	-webkit-box-shadow: 2px 2px 3px #999;
 	
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#e9ede8), to(#ce401c),color-stop(0.4, #8c1b0b));
+	background-image: -webkit-gradient(linear, left top, left bottom, 
+						from(#e9ede8), to(#ce401c),color-stop(0.4, #8c1b0b));
 }
 
 a.login-button:visited, a.login-button:hover, a.reg-button:visited, a.reg-button:hover {
