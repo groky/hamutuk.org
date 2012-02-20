@@ -16,12 +16,14 @@ body {
 
 header {
 	padding-top:20px;
+	width: 100%;
 }
 
 header nav, footer nav, .main-reg-login{
 	border: 1px solid #F0F0F0;
 	background-color: #feebb7;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#feebb7), to(#feebb7),color-stop(0.2, #fff));
+	background-image: -webkit-gradient(linear, left top, left bottom, 
+						from(#feebb7), to(#feebb7),color-stop(0.2, #fff));
 }
 
 /* the footer */
