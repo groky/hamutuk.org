@@ -10,6 +10,10 @@
     <%= f.label :email %><br />
     <%= f.text_field :email, :class=>"round" %>
   </div>
+	<div class="field">
+	  <%= f.label :type_id, "Registration Type" %> <br />
+	  <%= render 'user_type' %>
+	</div> 
   <div class="field">
     <%= f.label :password %><br />
     <%= f.password_field :password, :class=>"round"%>

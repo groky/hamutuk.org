@@ -18,7 +18,7 @@ header {
 	padding-top:20px;
 }
 
-header nav, footer nav {
+header nav, footer nav, .main-reg-login{
 	border: 1px solid #F0F0F0;
 	background-color: #feebb7;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#feebb7), to(#feebb7),color-stop(0.2, #fff));
@@ -228,8 +228,6 @@ div.field, div.actions {
 .main-reg-login {
 	position: relative;
 	float: right;
-	border: 1px solid #F0F0F0;
-	background-color: #feebb7;
 	padding: 2em 2em 2em 2em;
 	height: 100px;
 }

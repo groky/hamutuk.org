@@ -12,6 +12,7 @@ class UserController < ApplicationController
     else
       @title = "Registration Failure"
       @user.password = ""
+      types
       render :register
     end
   end
@@ -26,11 +27,21 @@ class UserController < ApplicationController
 
   def register
     @user = User.new
+    types
     @title = "Register"
+  end
+  
+  def levels
+    @levels = Levels.all
+  end
+  
+  def types
+    @types = UserTypes.all
   end
   
   def edit
     @user = User.find(params[:id])
+    types
     @title = "Edit #{@user.username}"
   end
   

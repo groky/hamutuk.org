@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :username, :password
+  attr_accessible :email, :username, :password, :type_id, :level_id
+  
+  belongs_to :levels, :foreign_key=>:level_id
+  belongs_to :usertypes, :foreign_key=>:type_id
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   
@@ -33,6 +36,15 @@ class User < ActiveRecord::Base
     (user && user.pwsalt == cookie_salt) ? user : nil
   end
   
+  #these are all the levels
+  #def levels
+  #  Levels.all
+  #end
+  
+  # these are all the user types
+  #def types
+  #  UserTypes.all
+  #end
   private
     def encrypt_password
       self.pwsalt = make_salt if new_record?

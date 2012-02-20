@@ -1,0 +1,7 @@
+<select id="user_type_id" name="user[type_id]" class="round">
+	<% @types.each do |type|%>
+	<option id=<%=type.id%> value=<%=type.id%> 
+	<%= type.id==@user.type_id ? "selected" : "" %>	
+	class="round"><%= type.name %></option>
+	<% end %>
+</select>
