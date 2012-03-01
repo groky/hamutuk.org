@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :username, :password, :type_id, :level_id
+  attr_accessible :email, :username, :password, :type_id, :level_id, :verified, 
+                  :confirmation_hash
   
+  # not sure if these two lines are necessary, but added them for documentation nonetheless
   belongs_to :levels, :foreign_key=>:level_id
   belongs_to :usertypes, :foreign_key=>:type_id
   
@@ -20,6 +22,7 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password
             
   before_save :encrypt_password
+  before_save :generate_hash unless :verified==true
   
   def has_password?(submitted_password)
     password == encrypt(submitted_password)
@@ -61,5 +64,9 @@ class User < ActiveRecord::Base
     
     def secure_hash(string)
       Digest::SHA2.hexdigest(string)
+    end
+    
+    def generate_hash
+      self.confirmation_hash = secure_hash("#{Time.now.utc}--#{self.email}")
     end
 end
