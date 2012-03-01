@@ -1,0 +1,13 @@
+Dear <%= @user.username %>,
+
+Thank you for registering with hamutuk.org, where your contribution can change the world!
+
+Please verify your account by clicking on the link below.
+
+<%= " #{root_url}users/verify/?hsh=#{@user.confirmation_hash}" %>
+
+If you are unable to click on the link, copy and paste it into your address bar on your browser.
+
+Kindly,
+
+Hamutuk.org Team
