@@ -31,6 +31,7 @@ HamutukOrg::Application.routes.draw do
   match 'user/show/:id'   ,:to => "user#show" 
   match 'register'        ,:to => "user#register"
   match 'users/:id/edit'  ,:to => "user#edit"
+  match 'verify'          ,:to => "user#verify"
   #match 'login'        ,:to  => "user#login"
   
   # The sessions routes
@@ -93,7 +94,4 @@ HamutukOrg::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
   
-  
-  #TODO - change this as soon as it works!!
-  default_url_options :host => "localhost:3000"
 end

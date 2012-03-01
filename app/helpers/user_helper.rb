@@ -6,6 +6,10 @@ module UserHelper
   end
   
   def verified?(user)
+    user.verified
+  end
+  
+  def verified(user)
     notice = "Please check your emails. You have not confirmed
     by clicking on the confirmation link in the email sent via the registration page"
     

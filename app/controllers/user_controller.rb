@@ -36,6 +36,7 @@ class UserController < ApplicationController
   def edit
     @user = User.find(params[:id])
     types
+    @user.password = ""
     @title = "Edit #{@user.username}"
   end
   
@@ -52,19 +53,25 @@ class UserController < ApplicationController
   
   def verify
     @user = User.find_by_confirmation_hash(params[:hsh])
-    
-    @user.verified=true unless user.nil?
-    if @user.save 
-      flash[:success] = "Congratulations on joining hamutuk.org!"
-      @title = "#{@user.username} verified. Welcome"
+    if !@user.nil && verified?(@user)
+      flash[:success] = "#{@user.username}, you have already verified your account!"
+      sign_in @user
       redirect_to @user
     else
-      flash[:failure] = "There has been a problem. You could not be verified. Please check your email
-      and try again"
-      @title = "Verification failure"
-      render :verify
-    end
+      @user.verified=true unless @user.nil?
     
+      if @user.save 
+        flash[:success] = "Congratulations on joining hamutuk.org!"
+        @title = "#{@user.username} verified. Welcome!"
+        sign_in @user
+        redirect_to @user
+      else
+        flash[:failure] = "There has been a problem. You could not be verified. Please check your email
+        and try again"
+        @title = "Verification failure"
+        render :register
+      end
+    end
   end
   
   def levels
@@ -85,15 +92,15 @@ class UserController < ApplicationController
       redirect_to(root_path) unless current_user?(@user)
     end
     
-    def verification
-      deny_access unless verified?
-    end
+    #def verification
+    #  deny_access unless verified?(@user)
+    #end
     
     def _email(user)
       #link = "#{root_url}/users/verify/?hsh=#{@user.confirmation_hash}"
       #puts link
       #then send the email
-      Emailer.sendmail(user, "Hamutuk Registration").deliver
+      Emailer.sendmail(user, "Hamutuk Registration", root_url).deliver
     end
 
 end
