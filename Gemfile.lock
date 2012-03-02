@@ -48,7 +48,9 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     nokogiri (1.5.0)
+    pg (0.13.2)
     polyglot (0.3.3)
+    postgres-pr (0.6.3)
     rack (1.2.5)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
@@ -101,6 +103,8 @@ DEPENDENCIES
   factory_girl_rails (= 1.0)
   gravatar_image_tag (= 0.1.0)
   json
+  pg (= 0.13.2)
+  postgres-pr (= 0.6.3)
   rails (= 3.0.1)
   rspec (= 2.0.1)
   rspec-rails (= 2.0.1)
