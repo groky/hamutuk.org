@@ -48,4 +48,28 @@ HamutukOrg::Application.configure do
   config.active_support.deprecation = :notify
   
   #config.serve_static_assets = true
+  
+  # Don't care if the mailer can't send
+  config.action_mailer.raise_delivery_errors = false
+
+  # Print deprecation notices to the Rails logger
+  config.active_support.deprecation = :log
+
+  # Only use best-standards-support built into browsers
+  config.action_dispatch.best_standards_support = :builtin
+  
+  config.action_mailer.raise_delivery_errors = true
+
+  # set delivery method to :smtp, :sendmail or :test
+  config.action_mailer.delivery_method = :smtp
+    
+  # these options are only needed if you choose smtp delivery
+  config.action_mailer.smtp_settings = {
+    :address        => 'smtp.webfaction.com',
+    :port           => 25,
+    :domain         => 'www.hamutuk.org',
+    :authentication => :login,
+    :user_name      => 'hamutuk',
+    :password       => 'h4mutuk2012'
+  }
 end
