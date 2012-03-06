@@ -25,6 +25,11 @@ group :test do
 	gem 'factory_girl_rails', '1.0'
 end
 
+group :production do
+	gem 'pg', '0.13.2'
+	gem 'postgres-pr', '0.6.3'
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
