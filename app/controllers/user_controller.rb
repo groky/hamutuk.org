@@ -52,8 +52,8 @@ class UserController < ApplicationController
   end
   
   def verify
-    @user = User.find_by_confirmation_hash(params[:hsh])
-    if !@user.nil && verified?(@user)
+    @user = User.find_by_confirmation_hash("#{params[:hsh]}")
+    if !@user.nil? && verified?(@user)
       flash[:success] = "#{@user.username}, you have already verified your account!"
       sign_in @user
       redirect_to @user
