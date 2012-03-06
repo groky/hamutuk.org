@@ -52,6 +52,7 @@ class UserController < ApplicationController
   end
   
   def verify
+
    @user = User.find_by_confirmation_hash("#{params[:hsh]}")
 
     if !@user.nil? && verified?(@user)
