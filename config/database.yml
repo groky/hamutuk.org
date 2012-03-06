@@ -21,4 +21,4 @@ production:
   username: kgrovers_hamutuk
   password: t0g3th3r
   pool: 30
-  #timeout: 5000
+  timeout: 5000
