@@ -5,7 +5,8 @@ gem 'rails', '3.0.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3-ruby', :require => 'sqlite3'
+#gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'ruby-mysql', '2.9.4'
 
 gem 'gravatar_image_tag', '0.1.0'
 group :development do
@@ -26,8 +27,8 @@ group :test do
 end
 
 group :production do
-	# gem 'pg', '0.13.2'
-	gem 'postgres-pr', '0.6.3'
+  #gem 'postgres-pr', '0.6.3'
+  #gem 'pg', '0.13.2'
 end
 
 # Use unicorn as the web server
