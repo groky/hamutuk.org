@@ -55,19 +55,31 @@ describe UserController do
         end.should change(User,:count).by(1)
       end
       
-      it "should redirect to the show page" do
+      it "should have verified==false" do
+        lambda do
+          post :create, :user => @attr
+          User.verified.should be_false
+        end
+      end
+      
+      it "should render to the verify page" do
         post :create, :user => @attr
-        response.should redirect_to(user_path(assigns(:user)))
+        flash[:success].should =~ /Please check your email and verify by clicking the link!/i
       end
       
       it "should have a welcome message" do
         post :create, :user => @attr
-        flash[:success].should =~ /congratulations on joining hamutuk.org!/i
+        flash[:success].should =~ /Please check your email and verify by clicking the link!/i
       end
       
-      it "should sign the user in" do
-        post :create , :user => @attr
-        controller.should be_signed_in
+      #it "should sign the user in" do
+      #  post :create , :user => @attr
+      #  controller.should be_signed_in
+      #end
+      
+      it "should send an email" do
+        post :create, :user => @attr
+        
       end
       
     end
@@ -114,7 +126,8 @@ describe UserController do
         
         it "should render the 'edit' page" do
           put :update, :id => @user, :user => @attr
-          response.should render_template('edit')
+          response.should have_errors unless @user.nil?
+          #response.should render_template('edit')
         end
         
         it "should have the correct title" do
